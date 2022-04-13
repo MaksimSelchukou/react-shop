@@ -1,11 +1,16 @@
 import React from "react";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+import { Shop } from "./components/Shop";
 
 function App() {
-  return (
-    <div className="App">
-      Start project,Exoooo
-    </div>
-  );
+    return (
+        <>
+            <Header />
+            <Shop />
+            <Footer />
+        </>
+    );
 }
 
 export default App;
