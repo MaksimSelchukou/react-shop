@@ -83,3 +83,26 @@ nav {
     opacity: 1.2;
   }
 }
+
+.send-btn {
+  border: 1px;
+  position: absolute;
+  bottom: 0.4rem;
+  right: 0.5rem;
+}
+
+#toast-container {
+  top: 3rem !important;
+  animation: show2 500ms;
+}
+
+@keyframes show2 {
+  from {
+    top: 70%;
+    opacity: 0;
+  }
+  to {
+    top: 30%;
+    opacity: 1.2;
+  }
+}

@@ -4,12 +4,18 @@ import { Preloader } from './Preloader'
 import { GoodsList } from './goods/GoodsList'
 import { Cart } from "./Cart"
 import { BasketList } from "./basket/BasketList"
+import { Alert } from "./Alert"
 
 export const Shop = () => {
     const [goods, setGoods] = useState([])
     const [loading, setLoading] = useState(true)
     const [order, setOrder] = useState([])
     const [isBasketShow, setBasketShow] = useState(false)
+    const [alertName, setAlertName] = useState('')
+
+    const closedAlert = () => {
+        setAlertName('')
+    }
 
 
     const incrOrder = (itemId) => {
@@ -68,7 +74,7 @@ export const Shop = () => {
             })
             setOrder(newOrder)
         }
-
+        setAlertName(item.name)
     }
 
     const handleBasketShow = () => {
@@ -92,6 +98,7 @@ export const Shop = () => {
             <Cart quantity={order.length} handleBasketShow={handleBasketShow} />
             {loading ? <Preloader /> : <GoodsList addToBasket={addToBasket} goods={goods} />}
             {isBasketShow && <BasketList order={order} handleBasketShow={handleBasketShow} deleteToBasket={deleteToBasket} incrOrder={incrOrder} decrOrder={decrOrder} />}
+            {alertName && <Alert name={alertName} closedAlert={closedAlert} />}
         </main>
     );
 }

@@ -19,7 +19,11 @@ export const BasketList = (props) => {
             )) : <li className="collection-item ">Корзина пуста</li>
             }
 
-            <li className="collection-item active">Общая стоимость:{totalPrice} руб</li>
+            <li className="collection-item active">Общая стоимость:{totalPrice} руб
+                <button class="btn waves-effect waves-light btn-small send-btn" type="submit" name="action">Оформить заказ
+                    <i class="material-icons right">send</i>
+                </button></li>
+
             <i onClick={handleBasketShow} className="material-icons basket-close">Закрыть корзину</i>
         </ul>
     )
