@@ -12,32 +12,33 @@ export const Shop = () => {
     const [isBasketShow, setBasketShow] = useState(false)
 
 
-    const incrOrder = (item) => {
-        addToBasket(item)
+    const incrOrder = (itemId) => {
+        const newOrder = order.map(el => {
+            if (el.id === itemId) {
+                return {
+                    ...el,
+                    quantity: el.quantity + 1
+                }
+            } else {
+                return el
+            }
+        })
+        setOrder(newOrder)
     }
 
-    const decrOrder = (item) => {
-        const itemIndex = order.findIndex(el => el.id === item.id)
-        if (itemIndex < 0) {
-            const newItem = {
-                ...item,
-                quantity: 1,
-            }
-            setOrder([...order, newItem])
-        } else {
-            const newOrder = order.map((orderItem, index) => {
-                if (index === itemIndex) {
-                    return {
-                        ...orderItem,
-                        quantity: orderItem.quantity > 0 ? orderItem.quantity - 1 : orderItem.quantit = 0
-                    }
-
-                } else {
-                    return orderItem
+    const decrOrder = (itemId) => {
+        const newOrder = order.map(el => {
+            if (el.id === itemId) {
+                return {
+                    ...el,
+                    quantity: (el.quantity - 1) > 0 ? (el.quantity - 1) : el.quantity = 0
                 }
-            })
-            setOrder(newOrder)
-        }
+            } else {
+                return el
+            }
+        })
+        setOrder(newOrder)
+
     }
 
     const deleteToBasket = (idItem) => {

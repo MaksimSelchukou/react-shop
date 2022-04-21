@@ -5,11 +5,11 @@ export const BasketItem = (props) => {
     const { id, name, price, quantity, deleteToBasket = Function.prototype, incrOrder = Function.prototype, decrOrder = Function.prototype } = props;
 
     const handleIncrem = () => {
-        incrOrder({ id, name, price })
+        incrOrder(id)
     }
 
     const handleDecrem = () => {
-        decrOrder({ id, name, price })
+        decrOrder(id)
     }
 
     const handleDeleteOrder = () => {
