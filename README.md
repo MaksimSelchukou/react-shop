@@ -1,3 +1,5 @@
+[Demo](https://maksimselchukou.github.io/react-shop)
+
 # Getting Started with React-Shop
 
 <b>First commit.</b> Initial files for working with the project
