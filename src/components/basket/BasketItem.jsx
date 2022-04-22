@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ShopContext } from "../../context";
 
 
 export const BasketItem = (props) => {
     const { id, name, price, quantity, deleteToBasket = Function.prototype, incrOrder = Function.prototype, decrOrder = Function.prototype } = props;
+
+    const { example } = useContext(ShopContext)
+    console.log(example);
 
     const handleIncrem = () => {
         incrOrder(id)

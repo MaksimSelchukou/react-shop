@@ -2,12 +2,15 @@ import React from "react";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Shop } from "./components/Shop";
+import { Context } from "./context";
 
 function App() {
     return (
         <>
             <Header />
-            <Shop />
+            <Context>
+                <Shop />
+            </Context>
             <Footer />
         </>
     );

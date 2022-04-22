@@ -19,3 +19,7 @@
 # Continue ProJect with React-Shop... Add new feature
 
 <b>Fifth commit.</b> Add new component Alert.This is a popup notification about adding an item to the cart.+ animation CSS.
+
+# Continue ProJect with React-Shop... Start refactoring useContext and reducers.
+
+<b>Ninth commit.</b>Start Start refactoring useContext and reducers.Add new files reducer.js and context.js
