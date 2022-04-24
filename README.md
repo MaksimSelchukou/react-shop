@@ -23,3 +23,7 @@
 # Continue ProJect with React-Shop... Start refactoring useContext and reducers.
 
 <b>Ninth commit.</b>Start Start refactoring useContext and reducers.Add new files reducer.js and context.js
+
+# Continue ProJect with React-Shop... Start refactoring useContext and reducers.
+
+<b>Tenth commit.</b> Added two new files. application refactoring to useContext
